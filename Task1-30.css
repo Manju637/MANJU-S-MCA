@@ -1,0 +1,72 @@
+ h1 {
+        color: red;
+    }
+
+        .defence {
+            color:brown(5, 124, 57);
+        }
+    
+         #details {
+            background-color: rgb(7, 119, 18);
+        }
+
+     h1, h2, p {
+            font-size: 24px;
+        }
+        
+        div p {
+            font-size: 20px;
+            font-style: oblique;
+        }
+
+        div > p {
+            color: rgb(20, 176, 211);
+        }
+
+         a:hover {
+            color: red;
+        }
+
+         p:first-child {
+            color: rgb(255, 0, 115);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+
+         
+         input [type="submit"] {
+            border: 2px solid rgb(4, 124, 38);
+            padding: 10px;
+            font-size: 16px;
+         }
+
+
+          /* Universal Selector */
+        * {
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        /* Element Selector */
+        h1 {
+            color: rgb(25, 181, 14);
+        }
+
+        /* Class Selector */
+        .defence {
+            color: rgb(4, 131, 167);
+            font-weight: bold;
+        }
+
+        /* ID Selector */
+        #details {
+            color:darkred;
+            background-color: rgb(224, 224, 12);
+            padding: 10px;
+        }
+
+         /* body {
+            background-color: rgb(123, 185, 206);
+        } */
+
+    
