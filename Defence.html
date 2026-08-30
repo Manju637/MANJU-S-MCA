@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Defence Recruitment Application</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* =========================
+           FULL PAGE DEFENCE BANNER
+        ========================= */
+
+        body {
+
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    rgba(0, 40, 20, 0.75),
+                    rgba(0, 0, 0, 0.75)
+                ),
+
+                url("https://images.unsplash.com/photo-1541447271487-09612b3f49f7?auto=format&fit=crop&w=1920&q=80");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+
+            padding: 30px;
+        }
+
+
+        /* =========================
+           MAIN FORM BOX
+        ========================= */
+
+        .container {
+
+            width: 900px;
+
+            max-width: 100%;
+
+            margin: auto;
+
+            background: rgba(255,255,255,0.97);
+
+            padding: 35px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 15px 45px rgba(0,0,0,0.55);
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+
+            text-align: center;
+
+            border-bottom: 3px solid #31572c;
+
+            padding-bottom: 20px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .header h1 {
+
+            color: #1b4332;
+
+            font-size: 30px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .header h2 {
+
+            color: #444;
+
+            font-size: 20px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .header p {
+
+            color: #666;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           SECTION TITLE
+        ========================= */
+
+        .section-title {
+
+            background: #1b4332;
+
+            color: white;
+
+            padding: 11px;
+
+            margin: 25px 0 18px;
+
+            border-radius: 5px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           FORM ROW
+        ========================= */
+
+        .form-row {
+
+            display: flex;
+
+            align-items: center;
+
+            margin-bottom: 16px;
+        }
+
+
+        /* LABEL LEFT */
+
+        .form-row label {
+
+            width: 40%;
+
+            font-weight: bold;
+
+            color: #263238;
+
+            padding-right: 20px;
+        }
+
+
+        /* INPUT RIGHT */
+
+        .form-row input,
+        .form-row select,
+        .form-row textarea {
+
+            width: 60%;
+
+            padding: 11px;
+
+            border: 1px solid #aaa;
+
+            border-radius: 6px;
+
+            font-size: 15px;
+
+            outline: none;
+        }
+
+
+        /* FOCUS */
+
+        .form-row input:focus,
+        .form-row select:focus,
+        .form-row textarea:focus {
+
+            border-color: #31572c;
+
+            box-shadow:
+                0 0 5px rgba(49,87,44,0.3);
+        }
+
+
+        /* TEXTAREA */
+
+        .form-row textarea {
+
+            height: 90px;
+
+            resize: vertical;
+        }
+
+
+        /* =========================
+           BUTTON AREA
+        ========================= */
+
+        .button-area {
+
+            text-align: center;
+
+            margin-top: 35px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #ddd;
+        }
+
+
+        .button-area button {
+
+            padding: 14px 32px;
+
+            border: none;
+
+            border-radius: 7px;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            margin: 5px 8px;
+        }
+
+
+        /* SUBMIT */
+
+        .submit-btn {
+
+            background: #1b4332;
+        }
+
+
+        .submit-btn:hover {
+
+            background: #081c15;
+        }
+
+
+        /* CLEAR */
+
+        .clear-btn {
+
+            background: #3b67e1;
+        }
+
+
+        .clear-btn:hover {
+
+            background: #2f07c3;
+        }
+
+
+        /* =========================
+           MOBILE RESPONSIVE
+        ========================= */
+
+        @media(max-width:650px) {
+
+            body {
+
+                padding: 10px;
+            }
+
+
+            .container {
+
+                padding: 20px;
+            }
+
+
+            .form-row {
+
+                display: block;
+            }
+
+
+            .form-row label {
+
+                display: block;
+
+                width: 100%;
+
+                margin-bottom: 7px;
+            }
+
+
+            .form-row input,
+            .form-row select,
+            .form-row textarea {
+
+                width: 100%;
+            }
+
+
+            .header h1 {
+
+                font-size: 23px;
+            }
+
+
+            .button-area button {
+
+                display: inline-block;
+
+                width: auto;
+
+                margin: 5px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <div class="header">
+
+        <h1>
+            INDIAN DEFENCE RECRUITMENT
+        </h1>
+
+        <h2>
+            Army Navy Airforce Recruitment 
+        </h2>
+
+        <p>
+            Online application form
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         FORM
+    ========================= -->
+
+    <form>
+
+
+        <!-- PERSONAL INFORMATION -->
+
+        <div class="section-title">
+            PERSONAL INFORMATION
+        </div>
+
+
+        <!-- 1 -->
+
+        <div class="form-row">
+
+            <label for="fullname">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Enter full name"
+                required
+            >
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div class="form-row">
+
+            <label for="father">
+                Father's Name
+            </label>
+
+            <input
+                type="text"
+                id="father"
+                name="father"
+                placeholder="Enter father's name"
+                required
+            >
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div class="form-row">
+
+            <label for="mother">
+                Mother's Name
+            </label>
+
+            <input
+                type="text"
+                id="mother"
+                name="mother"
+                placeholder="Enter mother's name"
+                required
+            >
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div class="form-row">
+
+            <label for="dob">
+                Date of Birth
+            </label>
+
+            <input
+                type="date"
+                id="dob"
+                name="dob"
+                required
+            >
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div class="form-row">
+
+            <label for="gender">
+                Gender
+            </label>
+
+            <select
+                id="gender"
+                name="gender"
+                required
+            >
+
+                <option value="">
+                    Select Gender
+                </option>
+
+                <option>
+                    Male
+                </option>
+
+                <option>
+                    Female
+                </option>
+
+                <option>
+                    Other
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div class="form-row">
+
+            <label for="nationality">
+                Nationality
+            </label>
+
+            <input
+                type="text"
+                id="nationality"
+                name="nationality"
+                value="Indian"
+                required
+            >
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div class="form-row">
+
+            <label for="aadhaar">
+                Aadhaar Number
+            </label>
+
+            <input
+                type="text"
+                id="aadhaar"
+                name="aadhaar"
+                placeholder="Enter 12-digit number"
+                maxlength="12"
+            >
+
+        </div>
+
+
+        <!-- =========================
+             CONTACT INFORMATION
+        ========================= -->
+
+        <div class="section-title">
+            CONTACT INFORMATION
+        </div>
+
+
+        <!-- 8 -->
+
+        <div class="form-row">
+
+            <label for="email">
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@gmail.com"
+                required
+            >
+
+        </div>
+
+
+        <!-- 9 -->
+
+        <div class="form-row">
+
+            <label for="phone">
+                Mobile Number
+            </label>
+
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter mobile number"
+                required
+            >
+
+        </div>
+
+
+        <!-- 10 -->
+
+        <div class="form-row">
+
+            <label for="address">
+                Permanent Address
+            </label>
+
+            <textarea
+                id="address"
+                name="address"
+                placeholder="Enter complete address"
+                required
+            ></textarea>
+
+        </div>
+
+
+        <!-- =========================
+             EDUCATION
+        ========================= -->
+
+        <div class="section-title">
+            EDUCATIONAL QUALIFICATION
+        </div>
+
+
+        <!-- 11 -->
+
+        <div class="form-row">
+
+            <label for="qualification">
+                Highest Qualification
+            </label>
+
+            <select
+                id="qualification"
+                name="qualification"
+                required
+            >
+
+                <option value="">
+                    Select Qualification
+                </option>
+
+                <option>
+                    10th
+                </option>
+
+                <option>
+                    12th
+                </option>
+
+                <option>
+                    Diploma
+                </option>
+
+                <option>
+                    Bachelor's Degree
+                </option>
+
+                <option>
+                    Master's Degree
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- 12 -->
+
+        <div class="form-row">
+
+            <label for="course">
+                Degree / Course
+            </label>
+
+            <input
+                type="text"
+                id="course"
+                name="course"
+                placeholder="Enter degree/course"
+            >
+
+        </div>
+
+
+        <!-- 13 -->
+
+        <div class="form-row">
+
+            <label for="college">
+                School / College
+            </label>
+
+            <input
+                type="text"
+                id="college"
+                name="college"
+                placeholder="Enter institution"
+            >
+
+        </div>
+
+
+        <!-- 14 -->
+
+        <div class="form-row">
+
+            <label for="percentage">
+                Percentage / CGPA
+            </label>
+
+            <input
+                type="number"
+                id="percentage"
+                name="percentage"
+                placeholder="Enter percentage"
+                step="0.01"
+            >
+
+        </div>
+
+
+        <!-- =========================
+             DEFENCE DETAILS
+        ========================= -->
+
+        <div class="section-title">
+            DEFENCE DETAILS
+        </div>
+
+
+        <!-- 15 -->
+
+        <div class="form-row">
+
+            <label for="force">
+                Preferred Defence Force
+            </label>
+
+            <select
+                id="force"
+                name="force"
+                required
+            >
+
+                <option value="">
+                    Select Force
+                </option>
+
+                <option>
+                    Indian Army
+                </option>
+
+                <option>
+                    Indian Navy
+                </option>
+
+                <option>
+                    Indian Air Force
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- 16 -->
+
+        <div class="form-row">
+
+            <label for="entry">
+                Preferred Officer Entry
+            </label>
+
+            <select
+                id="entry"
+                name="entry"
+                required
+            >
+
+                <option value="">
+                    Select Entry
+                </option>
+
+                <option>
+                    NDA
+                </option>
+
+                <option>
+                    CDS
+                </option>
+
+                <option>
+                    Technical Entry
+                </option>
+
+                <option>
+                    NCC Entry
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- 17 -->
+
+        <div class="form-row">
+
+            <label for="height">
+                Height (cm)
+            </label>
+
+            <input
+                type="number"
+                id="height"
+                name="height"
+                placeholder="Enter height"
+            >
+
+        </div>
+
+
+        <!-- 18 -->
+
+        <div class="form-row">
+
+            <label for="weight">
+                Weight (kg)
+            </label>
+
+            <input
+                type="number"
+                id="weight"
+                name="weight"
+                placeholder="Enter weight"
+            >
+
+        </div>
+
+
+        <!-- 19 -->
+
+        <div class="form-row">
+
+            <label for="ncc">
+                NCC Certificate
+            </label>
+
+            <select
+                id="ncc"
+                name="ncc"
+            >
+
+                <option value="">
+                    Select
+                </option>
+
+                <option>
+                    Yes
+                </option>
+
+                <option>
+                    No
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- 20 -->
+
+        <div class="form-row">
+
+            <label for="sports">
+                Sports Achievement
+            </label>
+
+            <input
+                type="text"
+                id="sports"
+                name="sports"
+                placeholder="Enter achievement"
+            >
+
+        </div>
+
+
+        <!-- 21 -->
+
+        <div class="form-row">
+
+            <label for="photo">
+                Passport Photo
+            </label>
+
+            <input
+                type="file"
+                id="photo"
+                name="photo"
+                accept="image/*"
+            >
+
+        </div>
+
+
+        <!-- 22 -->
+
+        <div class="form-row">
+
+            <label for="certificate">
+                Educational Certificate
+            </label>
+
+            <input
+                type="file"
+                id="certificate"
+                name="certificate"
+                accept=".pdf,.jpg,.jpeg,.png"
+            >
+
+        </div>
+
+
+        <!-- 23 -->
+
+        <div class="form-row">
+
+            <label for="experience">
+                NCC / Sports Experience
+            </label>
+
+            <textarea
+                id="experience"
+                name="experience"
+                placeholder="Describe your achievements"
+            ></textarea>
+
+        </div>
+
+
+        <!-- =========================
+             DECLARATION
+        ========================= -->
+
+        <div class="section-title">
+            DECLARATION
+        </div>
+
+
+        <!-- 24 -->
+
+        <div class="form-row">
+
+            <label for="declaration">
+                Applicant Declaration
+            </label>
+
+            <select
+                id="declaration"
+                name="declaration"
+                required
+            >
+
+                <option value="">
+                    Select
+                </option>
+
+                <option>
+                    I Agree
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- =========================
+             SUBMIT + CLEAR BUTTONS
+        ========================= -->
+
+        <div class="button-area">
+
+            <button
+                type="submit"
+                class="submit-btn">
+
+                SUBMIT APPLICATION
+
+            </button>
+
+
+            <button
+                type="reset"
+                class="clear-btn">
+
+                CLEAR 
+
+            </button>
+
+        </div>
+
+
+    </form>
+
+</div>
+
+
+</body>
+
+</html>
